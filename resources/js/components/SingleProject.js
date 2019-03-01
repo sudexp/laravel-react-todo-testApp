@@ -40,7 +40,9 @@ class SingleProject extends Component {
                             <div className="card-body">
                                 <p>{project.description}</p>
 
-                                <button className="btn btn-primary btn-sm">Mark as completed</button>
+                                <button className="btn btn-primary btn-sm" onClick={this.handleMarkProjectAsCompleted}>
+                                    Mark as completed
+                                </button>
 
                                 <hr />
 
