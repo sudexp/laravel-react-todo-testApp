@@ -91,6 +91,22 @@ class SingleProject extends Component {
                                     Mark as completed
                                 </button>
                                 <hr />
+                                <form onSubmit={this.handleAddNewTask}>
+                                    <div className="input-group">
+                                        <input
+                                            type="text"
+                                            name="title"
+                                            className={`form-control ${this.hasErrorFor('title') ? 'is-invalid' : ''}`}
+                                            placeholder="Task title"
+                                            value={this.state.title}
+                                            onChange={this.handleFieldChange}
+                                        />
+                                        <div className="input-group-append">
+                                            <button className="btn btn-primary">Add</button>
+                                        </div>
+                                        {this.renderErrorFor('title')}
+                                    </div>
+                                </form>
                                 <ul className="list-group mt-3">
                                     {tasks.map(task => (
                                         <li
