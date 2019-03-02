@@ -97,10 +97,7 @@ class SingleProject extends Component {
                             <div className="card-header">{project.name}</div>
                             <div className="card-body">
                                 <p>{project.description}</p>
-                                <button
-                                    className="btn btn-primary btn-sm"
-                                    onClick={this.handleMarkTaskAsCompleted.bind(this, task.id)}
-                                >
+                                <button className="btn btn-primary btn-sm" onClick={this.handleMarkProjectAsCompleted}>
                                     Mark as completed
                                 </button>
                                 <hr />
@@ -127,7 +124,12 @@ class SingleProject extends Component {
                                             key={task.id}
                                         >
                                             {task.title}
-                                            <button className="btn btn-primary btn-sm">Mark as completed</button>
+                                            <button
+                                                className="btn btn-primary btn-sm"
+                                                onClick={this.handleMarkTaskAsCompleted.bind(this, task.id)}
+                                            >
+                                                Mark as completed
+                                            </button>
                                         </li>
                                     ))}
                                 </ul>
