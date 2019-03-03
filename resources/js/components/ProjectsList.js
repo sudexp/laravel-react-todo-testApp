@@ -11,11 +11,13 @@ class ProjectsList extends Component {
     }
 
     componentDidMount() {
-        axios.get('/api/projects').then(response => {
-            this.setState({
-                projects: response.data
+        setTimeout(() => {
+            axios.get('/api/projects').then(response => {
+                this.setState({
+                    projects: response.data
+                });
             });
-        });
+        }, 5000);
     }
 
     render() {

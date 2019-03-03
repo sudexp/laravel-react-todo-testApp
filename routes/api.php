@@ -15,7 +15,7 @@
 //     return $request->user();
 // });
 
-Route::get('projects', 'ProjectController@index');
+Route::get('projects', 'ProjectController@index'); // "GET /api/projects"
 Route::post('projects', 'ProjectController@store');
 Route::get('projects/{id}', 'ProjectController@show');
 Route::put('projects/{project}', 'ProjectController@markAsCompleted');
